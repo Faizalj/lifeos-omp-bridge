@@ -63,6 +63,13 @@ Configuration:
 - `OMP_VOICE=0` — disable voice; `OMP_VOICE_ID` — override voice id
 - `OMP_VISION_MODEL` — image-describer model (default `gemma4:cloud` via ollama)
 
+## Harness coverage
+
+- **Claude Code** — native (LifeOS's home contract, `~/.claude/settings.json`).
+- **Codex CLI** — native: Codex executes the same hook contract itself
+  (`~/.codex/hooks.json` + hook trust states in `config.toml`). No bridge needed.
+- **omp** — this bridge (omp has no hook-contract runtime of its own).
+
 ## Verification
 
 Headless smoke test:
