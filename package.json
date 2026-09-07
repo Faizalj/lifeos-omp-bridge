@@ -1,0 +1,12 @@
+{
+  "name": "lifeos-omp-bridge",
+  "version": "2.0.0",
+  "description": "Runs LifeOS Claude-Code hooks inside omp (Oh My Pi) as a native omp extension",
+  "type": "module",
+  "main": "lifeos-hooks-bridge.ts",
+  "omp": {
+    "extensions": ["./lifeos-hooks-bridge.ts"]
+  },
+  "keywords": ["omp", "oh-my-pi", "lifeos", "hooks", "extension"],
+  "license": "MIT"
+}
