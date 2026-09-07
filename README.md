@@ -73,3 +73,14 @@ OMP_BRIDGE_LOG=/tmp/bridge-test.log omp -p --auto-approve "run: echo bridge-v2-t
 
 Audit log shows per-hook invocations with real session ids and transcript paths,
 plus `session_stop` entries for Stop hooks.
+
+Or run the canary, which asserts the whole contract:
+
+```bash
+./bridge-check.sh
+```
+
+One headless omp turn, then checks: extension loaded, registry parsed, no
+placeholder session ids, transcript path resolves, all six CC event classes
+fire, `session_stop` present. Run after LifeOS updates or omp upgrades — a
+FAIL names which part of the contract broke.
